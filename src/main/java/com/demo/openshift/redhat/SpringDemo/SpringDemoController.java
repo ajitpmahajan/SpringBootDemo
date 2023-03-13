@@ -36,10 +36,10 @@ public class SpringDemoController {
         Owner owner = new Owner();
         owner.setFirstName(ownerFirstName);
         owner.setLastName(ownerLastName);
-        owner.setAddress("Ghansoli");
-        owner.setCity("Navi Mumbai");
+        owner.setAddress("Address Line 1");
+        owner.setCity("City");
         owner.setId(121);
-        owner.setTelephone("9819955770");
+        owner.setTelephone("9876543210");
         ownerRepository.save(owner);
 
         return "Owner Added Successfully";
