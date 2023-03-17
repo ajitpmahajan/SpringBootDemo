@@ -2,6 +2,7 @@ package com.demo.openshift.redhat.SpringDemo;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Random;
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,7 +40,21 @@ public class SpringDemoController {
         owner.setAddress("Address Line 1");
         owner.setCity("City");
         owner.setId(121);
-        owner.setTelephone("9876543210");
+
+
+        //Random Generator function to generate 10 digit random mobile number
+        Random rand = new Random();
+        long drand = (long)(rand.nextDouble()*10000000000L);
+
+        owner.setTelephone(String.valueOf(drand));
+
+        for(int i =0; i<100; i++)
+        {
+            Random random = new Random();
+            random.setSeed(1234567890);
+            int randNum = random.nextInt();
+        }
+
         ownerRepository.save(owner);
 
         return "Owner Added Successfully";
