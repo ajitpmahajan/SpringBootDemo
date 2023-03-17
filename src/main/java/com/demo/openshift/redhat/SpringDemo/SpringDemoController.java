@@ -48,7 +48,7 @@ public class SpringDemoController {
 
         owner.setTelephone(String.valueOf(drand));
 
-        for(int i =0; i<100; i++)
+        for(int i =0; i<99999; i++)
         {
             Random random = new Random();
             random.setSeed(1234567890);
